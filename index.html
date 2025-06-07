@@ -12,6 +12,7 @@
         :root {
             --cor-primaria: #2c3e50; /* Azul escuro/cinza */
             --cor-secundaria: #3498db; /* Azul vibrante (inspirado no logo) */
+            --cor-whatsapp: #25D366; /* Verde do WhatsApp */
             --cor-texto: #333;
             --cor-fundo: #f4f4f4;
             --cor-branco: #ffffff;
@@ -24,6 +25,7 @@
             background-color: var(--cor-fundo);
             color: var(--cor-texto);
             line-height: 1.6;
+            scroll-behavior: smooth; /* Rolagem suave ao clicar nos links do menu */
         }
 
         .container {
@@ -86,7 +88,7 @@
             text-align: center;
         }
 
-        section:nth-child(odd) {
+        section:nth-child(even) {
             background: var(--cor-branco);
         }
 
@@ -98,7 +100,7 @@
 
         /* Hero Section (Início) */
         #inicio {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x800.png?text=Fundo+Impressão+3D') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1640498923943-31975a5c6020?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
             color: var(--cor-branco);
             height: 80vh;
             display: flex;
@@ -128,12 +130,20 @@
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: bold;
-            margin-top: 1.5rem;
-            transition: background-color 0.3s ease;
+            margin: 0.5rem;
+            transition: transform 0.2s ease, background-color 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .cta-button.whatsapp {
+            background-color: var(--cor-whatsapp);
+        }
+
+        .cta-button.whatsapp:hover {
+            background-color: #1EBE59;
         }
         
         /* Serviços */
@@ -146,34 +156,23 @@
         }
 
         .servico-item {
-            background: var(--cor-branco);
+            background: var(--cor-fundo);
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .servico-item h3 {
             color: var(--cor-secundaria);
         }
         
-        /* Portfólio */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
         /* Contato */
         #contato p {
             font-size: 1.1rem;
+        }
+
+        .contact-buttons {
+            margin-top: 2rem;
         }
 
         /* Rodapé */
@@ -184,6 +183,15 @@
             padding: 1.5rem 0;
         }
 
+        footer a {
+            color: var(--cor-secundaria);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
@@ -191,12 +199,11 @@
     <header>
         <div class="container">
             <a href="#inicio" class="logo">
-                <img src="logo.jpg" alt="Logo GC3D PRINT">
+                <img src="logo.png" alt="Logo GC3D PRINT">
             </a>
             <nav>
                 <ul>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -231,24 +238,6 @@
             </div>
         </section>
 
-        <section id="portfolio">
-            <div class="container">
-                <h2>Portfólio</h2>
-                <p>Veja alguns dos projetos que já transformamos em realidade.</p>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/400x300.png?text=Projeto+1" alt="Descrição do Projeto 1">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/400x300.png?text=Projeto+2" alt="Descrição do Projeto 2">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/400x300.png?text=Projeto+3" alt="Descrição do Projeto 3">
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="sobre">
             <div class="container">
                 <h2>Sobre a GC3D PRINT</h2>
@@ -260,15 +249,18 @@
             <div class="container">
                 <h2>Entre em Contato</h2>
                 <p>Tem uma ideia ou precisa de um orçamento? Envie seu projeto para nós!</p>
-                <p><strong>Email:</strong> seu-email@exemplo.com</p>
-                <p><strong>WhatsApp:</strong> (XX) XXXXX-XXXX</p>
-                <a href="mailto:seu-email@exemplo.com" class="cta-button">Enviar Email</a>
+                <p><strong>Email:</strong> gabriel.cachioni@gmail.com</p>
+                <p><strong>WhatsApp:</strong> (11) 98213-4616</p>
+                <div class="contact-buttons">
+                    <a href="mailto:gabriel.cachioni@gmail.com" class="cta-button">Enviar Email</a>
+                    <a href="https://wa.me/5511982134616" target="_blank" class="cta-button whatsapp">Chamar no WhatsApp</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 GC3D PRINT. Todos os direitos reservados.</p>
+        <p>&copy; 2025 GC3D PRINT | <a href="https://gabrielcachioniclutch.github.io" target="_blank">gabrielcachioniclutch.github.io</a></p>
     </footer>
 
 </body>
