@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>GC3D PRINT - Serviços de Impressão 3D</title>
-    
-    <meta name="description" content="Serviços profissionais de impressão 3D em Itanhaém. Prototipagem rápida, peças personalizadas e muito mais.">
-    <meta name="keywords" content="impressão 3d, itanhaém, prototipagem, 3d print, fdm, sla, gc3d">
+
+    <title>ITA3D - Serviços de Impressão</title>
+
+    <meta name="description" content="Serviços profissionais de impressão 3D em Itanhaém. Prototipagem rápida, peças personalizadas e muito mais com ITA3D.">
+    <meta name="keywords" content="impressão 3d, itanhaém, prototipagem, 3d print, fdm, sla, ita3d">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -15,28 +15,29 @@
     <style>
         /* Estilos Gerais */
         :root {
-            --cor-primaria: #2c3e50; /* Azul escuro/cinza */
-            --cor-secundaria: #3498db; /* Azul vibrante (inspirado no logo) */
-            --cor-whatsapp: #25D366; /* Verde do WhatsApp */
+            --cor-primaria: #2c3e50; /* Um azul mais escuro e sóbrio */
+            --cor-secundaria: #1f6feb; /* Azul vibrante do logo */
+            --cor-destaque: #e01b84; /* Rosa/Magenta do logo */
+            --cor-whatsapp: #25D366;
             --cor-texto: #333;
             --cor-fundo: #f4f4f4;
             --cor-branco: #ffffff;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--cor-fundo);
             color: var(--cor-texto);
             line-height: 1.6;
-            scroll-behavior: smooth; /* Rolagem suave ao clicar nos links do menu */
+            scroll-behavior: smooth;
         }
 
         .container {
             max-width: 1100px;
             margin: auto;
-            overflow: auto;
+            overflow: hidden;
             padding: 0 2rem;
         }
 
@@ -58,7 +59,7 @@
         }
 
         header .logo img {
-            height: 60px; /* Ajuste a altura do logo conforme necessário */
+            height: 60px;
         }
 
         header nav ul {
@@ -69,7 +70,7 @@
         }
 
         header nav ul li {
-            margin-left: 20px;
+            margin-left: 25px;
         }
 
         header nav ul li a {
@@ -85,7 +86,7 @@
 
         /* Seções */
         main {
-            padding-top: 100px; /* Espaço para o cabeçalho fixo */
+            padding-top: 90px; /* Ajuste para a altura do cabeçalho */
         }
         
         section {
@@ -105,9 +106,9 @@
 
         /* Hero Section (Início) */
         #inicio {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1640498923943-31975a5c6020?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1640498923943-31975a5c6020?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
             color: var(--cor-branco);
-            height: 80vh;
+            height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -116,61 +117,62 @@
         }
         
         #inicio h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 3.8rem;
+            margin-bottom: 0.5rem;
         }
 
         #inicio p {
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 1.3rem;
+            max-width: 650px;
+            font-weight: 300;
         }
 
-        /* Botão CTA (Call-to-action) */
+        /* Botões */
         .cta-button {
             display: inline-block;
-            background-color: var(--cor-secundaria);
             color: var(--cor-branco);
-            padding: 12px 25px;
+            padding: 12px 28px;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: bold;
             margin: 0.5rem;
-            transition: transform 0.2s ease, background-color 0.3s ease;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
             border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .cta-button.principal {
+            background-color: var(--cor-secundaria);
         }
 
         .cta-button.whatsapp {
             background-color: var(--cor-whatsapp);
         }
 
-        .cta-button.whatsapp:hover {
-            background-color: #1EBE59;
-        }
-
         .cta-button.instagram {
-            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
         }
-
         
         /* Serviços */
         .servicos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
             text-align: left;
         }
 
         .servico-item {
-            background: var(--cor-fundo);
+            background: var(--cor-branco);
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
 
         .servico-item h3 {
@@ -178,13 +180,19 @@
         }
         
         /* Contato */
+        #contato .container {
+            max-width: 800px;
+        }
+
         #contato p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
         }
         
         #contato p a {
            color: var(--cor-secundaria);
            text-decoration: none;
+           font-weight: bold;
         }
         
         #contato p a:hover {
@@ -200,11 +208,11 @@
             background: var(--cor-primaria);
             color: var(--cor-branco);
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
         }
 
         footer a {
-            color: var(--cor-secundaria);
+            color: #a7d1ff; /* Cor mais clara para o link no rodapé */
             text-decoration: none;
         }
 
@@ -219,7 +227,7 @@
     <header>
         <div class="container">
             <a href="#inicio" class="logo">
-                <img src="logo.jpg" alt="Logo GC3D PRINT">
+                <img src="https://gabrielcachioniclutch.github.io/logo.jpg" alt="Logo ITA3D">
             </a>
             <nav>
                 <ul>
@@ -233,9 +241,9 @@
 
     <main>
         <section id="inicio">
-            <h1>GC3D PRINT</h1>
-            <p>Dando vida às suas ideias com a precisão da tecnologia 3D. Soluções em prototipagem, peças finais e projetos personalizados.</p>
-            <a href="#contato" class="cta-button">Faça um Orçamento</a>
+            <h1>ITA3D</h1>
+            <p>Serviços de Impressão 3D em Itanhaém. Damos vida às suas ideias com a precisão da tecnologia 3D.</p>
+            <a href="#contato" class="cta-button principal">Faça um Orçamento</a>
         </section>
 
         <section id="servicos">
@@ -251,7 +259,7 @@
                         <p>Produzimos peças sob medida para reposição, projetos de hobby, ou qualquer necessidade específica que você tenha.</p>
                     </div>
                     <div class="servico-item">
-                        <h3>Impressão com Diversos Materiais</h3>
+                        <h3>Modelagem e Consultoria</h3>
                         <p>Trabalhamos com uma variedade de materiais como PLA, ABS, PETG e mais, para atender os requisitos do seu projeto.</p>
                     </div>
                 </div>
@@ -260,21 +268,19 @@
 
         <section id="sobre">
             <div class="container">
-                <h2>Sobre a GC3D PRINT</h2>
-                <p>Somos apaixonados por tecnologia e inovação. A GC3D PRINT nasceu do desejo de tornar a impressão 3D acessível, oferecendo serviços de alta qualidade para estudantes, engenheiros, designers e entusiastas. Nosso compromisso é com a precisão, qualidade e satisfação do cliente em cada peça que produzimos.</p>
+                <h2>Sobre a ITA3D</h2>
+                <p>Somos apaixonados por tecnologia e inovação. A ITA3D nasceu do desejo de tornar a impressão 3D acessível em Itanhaém, oferecendo serviços de alta qualidade para estudantes, engenheiros, designers e entusiastas. Nosso compromisso é com a precisão, qualidade e satisfação do cliente em cada peça que produzimos.</p>
             </div>
         </section>
 
         <section id="contato">
             <div class="container">
                 <h2>Entre em Contato</h2>
-                <p>Tem uma ideia ou precisa de um orçamento? Envie seu projeto para nós!</p>
-                <p><strong>Email:</strong> gabriel.cachioni@gmail.com</p>
-                <p><strong>WhatsApp:</strong> (11) 98213-4616</p>
-                <p><strong>Endereço:</strong> <a href="https://maps.google.com/?cid=4668068060029434385" target="_blank">Rua Leão XIII, 1820, Suarão - Itanhaém/SP</a></p>
+                <p>Tem uma ideia ou precisa de um orçamento? Fale conosco!</p>
+                <p><strong>Email:</strong> <a href="mailto:gabriel.cachioni@gmail.com">gabriel.cachioni@gmail.com</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511982134616" target="_blank">(11) 98213-4616</a></p>
+                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Rua+Leao+XIII+1820+Suarao+Itanhaem+SP" target="_blank">Rua Leão XIII, 1820, Suarão - Itanhaém/SP</a></p>
                 <div class="contact-buttons">
-                    <a href="mailto:gabriel.cachioni@gmail.com" class="cta-button">Enviar Email</a>
-                    <a href="https://wa.me/5511982134616" target="_blank" class="cta-button whatsapp">Chamar no WhatsApp</a>
                     <a href="https://www.instagram.com/ita3d.print/" target="_blank" class="cta-button instagram">Siga no Instagram</a>
                 </div>
             </div>
@@ -282,7 +288,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 GC3D PRINT | <a href="https://gabrielcachioniclutch.github.io" target="_blank">gabrielcachioniclutch.github.io</a></p>
+        <p>© 2025 ITA3D - Serviços de Impressão | <a href="https://gabrielcachioniclutch.github.io" target="_blank">gabrielcachioniclutch.github.io</a></p>
     </footer>
 
 </body>
