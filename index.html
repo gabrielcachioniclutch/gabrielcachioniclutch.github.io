@@ -1,8 +1,275 @@
-<html>
-<header>
-<title>
-</title>
-</header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC3D PRINT - Serviços de Impressão 3D</title>
+    <meta name="description" content="Serviços profissionais de impressão 3D. Prototipagem rápida, peças personalizadas e muito mais.">
+    <meta name="keywords" content="impressão 3d, prototipagem, 3d print, fdm, sla, gc3d">
+
+    <style>
+        /* Estilos Gerais */
+        :root {
+            --cor-primaria: #2c3e50; /* Azul escuro/cinza */
+            --cor-secundaria: #3498db; /* Azul vibrante (inspirado no logo) */
+            --cor-texto: #333;
+            --cor-fundo: #f4f4f4;
+            --cor-branco: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: auto;
+            padding: 0 2rem;
+        }
+
+        /* Cabeçalho e Navegação */
+        header {
+            background: var(--cor-branco);
+            padding: 1rem 0;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 60px; /* Ajuste a altura do logo conforme necessário */
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: var(--cor-primaria);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: var(--cor-secundaria);
+        }
+
+        /* Seções */
+        main {
+            padding-top: 100px; /* Espaço para o cabeçalho fixo */
+        }
+        
+        section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        section:nth-child(odd) {
+            background: var(--cor-branco);
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--cor-primaria);
+        }
+
+        /* Hero Section (Início) */
+        #inicio {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x800.png?text=Fundo+Impressão+3D') no-repeat center center/cover;
+            color: var(--cor-branco);
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        #inicio h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #inicio p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* Botão CTA (Call-to-action) */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cor-secundaria);
+            color: var(--cor-branco);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Serviços */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .servico-item {
+            background: var(--cor-branco);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .servico-item h3 {
+            color: var(--cor-secundaria);
+        }
+        
+        /* Portfólio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Contato */
+        #contato p {
+            font-size: 1.1rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background: var(--cor-primaria);
+            color: var(--cor-branco);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+    </style>
+</head>
 <body>
+
+    <header>
+        <div class="container">
+            <a href="#inicio" class="logo">
+                <img src="logo.jpg" alt="Logo GC3D PRINT">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>GC3D PRINT</h1>
+            <p>Dando vida às suas ideias com a precisão da tecnologia 3D. Soluções em prototipagem, peças finais e projetos personalizados.</p>
+            <a href="#contato" class="cta-button">Faça um Orçamento</a>
+        </section>
+
+        <section id="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-item">
+                        <h3>Prototipagem Rápida</h3>
+                        <p>Crie modelos físicos e protótipos funcionais do seu produto de forma rápida e com baixo custo para validar seu design.</p>
+                    </div>
+                    <div class="servico-item">
+                        <h3>Peças Personalizadas</h3>
+                        <p>Produzimos peças sob medida para reposição, projetos de hobby, ou qualquer necessidade específica que você tenha.</p>
+                    </div>
+                    <div class="servico-item">
+                        <h3>Impressão com Diversos Materiais</h3>
+                        <p>Trabalhamos com uma variedade de materiais como PLA, ABS, PETG e mais, para atender os requisitos do seu projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <h2>Portfólio</h2>
+                <p>Veja alguns dos projetos que já transformamos em realidade.</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Projeto+1" alt="Descrição do Projeto 1">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Projeto+2" alt="Descrição do Projeto 2">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300.png?text=Projeto+3" alt="Descrição do Projeto 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre a GC3D PRINT</h2>
+                <p>Somos apaixonados por tecnologia e inovação. A GC3D PRINT nasceu do desejo de tornar a impressão 3D acessível, oferecendo serviços de alta qualidade para estudantes, engenheiros, designers e entusiastas. Nosso compromisso é com a precisão, qualidade e satisfação do cliente em cada peça que produzimos.</p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Tem uma ideia ou precisa de um orçamento? Envie seu projeto para nós!</p>
+                <p><strong>Email:</strong> seu-email@exemplo.com</p>
+                <p><strong>WhatsApp:</strong> (XX) XXXXX-XXXX</p>
+                <a href="mailto:seu-email@exemplo.com" class="cta-button">Enviar Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GC3D PRINT. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
