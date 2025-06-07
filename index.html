@@ -6,8 +6,8 @@
     
     <title>GC3D PRINT - Serviços de Impressão 3D</title>
     
-    <meta name="description" content="Serviços profissionais de impressão 3D. Prototipagem rápida, peças personalizadas e muito mais.">
-    <meta name="keywords" content="impressão 3d, prototipagem, 3d print, fdm, sla, gc3d">
+    <meta name="description" content="Serviços profissionais de impressão 3D em Itanhaém. Prototipagem rápida, peças personalizadas e muito mais.">
+    <meta name="keywords" content="impressão 3d, itanhaém, prototipagem, 3d print, fdm, sla, gc3d">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -137,6 +137,7 @@
             font-weight: bold;
             margin: 0.5rem;
             transition: transform 0.2s ease, background-color 0.3s ease;
+            border: none;
         }
 
         .cta-button:hover {
@@ -150,6 +151,11 @@
         .cta-button.whatsapp:hover {
             background-color: #1EBE59;
         }
+
+        .cta-button.instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
+
         
         /* Serviços */
         .servicos-grid {
@@ -174,6 +180,15 @@
         /* Contato */
         #contato p {
             font-size: 1.1rem;
+        }
+        
+        #contato p a {
+           color: var(--cor-secundaria);
+           text-decoration: none;
+        }
+        
+        #contato p a:hover {
+           text-decoration: underline;
         }
 
         .contact-buttons {
@@ -204,7 +219,7 @@
     <header>
         <div class="container">
             <a href="#inicio" class="logo">
-                <img src="https://gabrielcachioniclutch.github.io/logo.jpg" alt="Logo GC3D PRINT">
+                <img src="logo.jpg" alt="Logo GC3D PRINT">
             </a>
             <nav>
                 <ul>
@@ -256,9 +271,11 @@
                 <p>Tem uma ideia ou precisa de um orçamento? Envie seu projeto para nós!</p>
                 <p><strong>Email:</strong> gabriel.cachioni@gmail.com</p>
                 <p><strong>WhatsApp:</strong> (11) 98213-4616</p>
+                <p><strong>Endereço:</strong> <a href="https://maps.google.com/?cid=4668068060029434385" target="_blank">Rua Leão XIII, 1820, Suarão - Itanhaém/SP</a></p>
                 <div class="contact-buttons">
                     <a href="mailto:gabriel.cachioni@gmail.com" class="cta-button">Enviar Email</a>
                     <a href="https://wa.me/5511982134616" target="_blank" class="cta-button whatsapp">Chamar no WhatsApp</a>
+                    <a href="https://www.instagram.com/ita3d.print/" target="_blank" class="cta-button instagram">Siga no Instagram</a>
                 </div>
             </div>
         </section>
