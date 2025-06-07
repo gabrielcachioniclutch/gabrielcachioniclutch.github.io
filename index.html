@@ -86,7 +86,7 @@
 
         /* Seções */
         main {
-            padding-top: 90px; /* Ajuste para a altura do cabeçalho */
+            padding-top: 90px; /* Espaço para o cabeçalho fixo */
         }
         
         section {
@@ -94,7 +94,7 @@
             text-align: center;
         }
 
-        section:nth-child(even) {
+        #servicos {
             background: var(--cor-branco);
         }
 
@@ -104,27 +104,24 @@
             color: var(--cor-primaria);
         }
 
-        /* Hero Section (Início) */
+        /* Seção de Início Simplificada */
         #inicio {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1640498923943-31975a5c6020?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
-            color: var(--cor-branco);
-            height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            padding: 3rem 0 1rem 0;
+            background: var(--cor-fundo);
         }
         
         #inicio h1 {
             font-size: 3.8rem;
             margin-bottom: 0.5rem;
+            color: var(--cor-primaria);
         }
 
         #inicio p {
             font-size: 1.3rem;
             max-width: 650px;
+            margin: auto;
             font-weight: 300;
+            color: var(--cor-texto);
         }
 
         /* Botões */
@@ -169,7 +166,7 @@
         }
 
         .servico-item {
-            background: var(--cor-branco);
+            background: var(--cor-fundo);
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -180,6 +177,9 @@
         }
         
         /* Contato */
+        #contato {
+             background: var(--cor-branco);
+        }
         #contato .container {
             max-width: 800px;
         }
@@ -241,9 +241,10 @@
 
     <main>
         <section id="inicio">
-            <h1>ITA3D</h1>
-            <p>Serviços de Impressão 3D em Itanhaém. Damos vida às suas ideias com a precisão da tecnologia 3D.</p>
-            <a href="#contato" class="cta-button principal">Faça um Orçamento</a>
+             <div class="container">
+                <h1>ITA3D</h1>
+                <p>Serviços de Impressão 3D em Itanhaém. Damos vida às suas ideias com a precisão da tecnologia 3D.</p>
+            </div>
         </section>
 
         <section id="servicos">
@@ -277,10 +278,12 @@
             <div class="container">
                 <h2>Entre em Contato</h2>
                 <p>Tem uma ideia ou precisa de um orçamento? Fale conosco!</p>
-                <p><strong>Email:</strong> <a href="mailto:gabriel.cachioni@gmail.com">gabriel.cachioni@gmail.com</a></p>
-                <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511982134616" target="_blank">(11) 98213-4616</a></p>
-                <p><strong>Endereço:</strong> <a href="https://maps.app.goo.gl/zM4FBxKfzmPUXNes7" target="_blank">Rua Leão XIII, 1820, Suarão - Itanhaém/SP</a></p>
+                <p><strong>Email:</strong> gabriel.cachioni@gmail.com</p>
+                <p><strong>WhatsApp:</strong> (11) 98213-4616</p>
+                <p><strong>Endereço:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Rua+Leao+XIII+1820+Suarao+Itanhaem+SP" target="_blank">Rua Leão XIII, 1820, Suarão - Itanhaém/SP</a></p>
                 <div class="contact-buttons">
+                    <a href="mailto:gabriel.cachioni@gmail.com" class="cta-button principal">Enviar Email</a>
+                    <a href="https://wa.me/5511982134616" target="_blank" class="cta-button whatsapp">Chamar no WhatsApp</a>
                     <a href="https://www.instagram.com/ita3d.print/" target="_blank" class="cta-button instagram">Siga no Instagram</a>
                 </div>
             </div>
